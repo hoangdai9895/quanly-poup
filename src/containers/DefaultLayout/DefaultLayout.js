@@ -29,48 +29,12 @@ class DefaultLayout extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data:null
     };
   }
 
-   componentWillMount() {
-     
-        popupData.on('value', (event) => {
-      var arrData = [];
-      event.forEach(el => {
-        const key = el.key;
-        const check_box = el.val().check_box;
-        const end_time = el.val().end_time;
-        const link_anh = el.val().link_anh;
-        const link_landing = el.val().link_landing;
-        const start_time = el.val().start_time;
-        const tan_suat = el.val().tan_suat;
-        const utm_campaign = el.val().utm_campaign;
-        const utm_content = el.val().utm_content;
-        const utm_medium = el.val().utm_medium
-        arrData.push({
-          id:key,
-          check_box: check_box,
-          end_time: end_time,
-          link_anh: link_anh,
-          link_landing: link_landing,
-          start_time: start_time,
-          tan_suat: tan_suat,
-          utm_campaign: utm_campaign,
-          utm_content: utm_content,
-          utm_medium: utm_medium
-        })
-      });
-      this.setState({
-        data:arrData
-      })
-    })
-  }
-
-
 
   render() {
-    console.log(this.state.data)
+ 
     return (
       <div className="app">
         <AppHeader fixed>

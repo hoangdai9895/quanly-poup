@@ -9,12 +9,12 @@ class TabItem extends Component {
     };
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if(nextProps.data!==this.props.data){
-      return true
-    }
-    return false
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if(nextProps.data!==this.props.data){
+  //     return true
+  //   }
+  //   return false
+  // }
 
   render() {
     // console.log(this.props.data)

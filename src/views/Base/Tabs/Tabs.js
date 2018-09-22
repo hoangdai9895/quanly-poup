@@ -25,9 +25,46 @@ class Tabs extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if(nextProps.data&&this.state.data==null){
-        nextProps.data.on('value', (event) => {
+  // componentWillReceiveProps(nextProps) {
+  //   if(nextProps.data!==this.props.data){
+  //     // console.log('da thuc hien')
+  //       nextProps.data.on('value', (event) => {
+  //     var arrData = [];
+  //     event.forEach(el => {
+  //       const key = el.key;
+  //       const name = el.val().name
+  //       const check_box = el.val().check_box;
+  //       const end_time = el.val().end_time;
+  //       const link_anh = el.val().link_anh;
+  //       const link_landing = el.val().link_landing;
+  //       const start_time = el.val().start_time;
+  //       const tan_suat = el.val().tan_suat;
+  //       const utm_campaign = el.val().utm_campaign;
+  //       const utm_content = el.val().utm_content;
+  //       const utm_medium = el.val().utm_medium
+  //       arrData.push({
+  //         id:key,
+  //         name:name,
+  //         check_box: check_box,
+  //         end_time: end_time,
+  //         link_anh: link_anh,
+  //         link_landing: link_landing,
+  //         start_time: start_time,
+  //         tan_suat: tan_suat,
+  //         utm_campaign: utm_campaign,
+  //         utm_content: utm_content,
+  //         utm_medium: utm_medium
+  //       })
+  //     });
+  //     this.setState({
+  //       data:arrData
+  //     })
+  //   })
+  //   } 
+  // }
+  componentDidMount() {
+    // if(this.props.data){
+       this.props.data.on('value', (event) => {
       var arrData = [];
       event.forEach(el => {
         const key = el.key;
@@ -59,15 +96,13 @@ class Tabs extends Component {
         data:arrData
       })
     })
-    } 
+
+          
   }
 
+
   render() {
-    // console.log('dada store', this.props.data)
-    // console.log('dada', this.state.data)
-    // popupData.once('value').then((snapshot)=>{
-    //   console.log(snapshot.val())
-    // })
+ 
     return (
       <div className="animated fadeIn">
         <Row>
