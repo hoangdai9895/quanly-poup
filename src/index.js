@@ -5,7 +5,12 @@ import './index.css';
 import App from './App';
 // disable ServiceWorker
 // import registerServiceWorker from './registerServiceWorker';
+import store from './store.js'
+import { Provider } from 'react-redux';
+ReactDOM.render(
 
-ReactDOM.render(<App />, document.getElementById('root'));
-// disable ServiceWorker
-// registerServiceWorker();
+	<Provider store={store}>
+	<App />
+	</Provider>, document.getElementById('root'));
+
+
