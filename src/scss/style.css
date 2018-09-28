@@ -9872,5 +9872,27 @@ body {
 .table th {
   text-transform: capitalize; }
 
+label {
+  font-weight: bold; }
+
+.fl-r {
+  float: right; }
+
+ul {
+  padding: 0; }
+  ul li {
+    list-style: none;
+    margin: 0 0 20px 0; }
+
+.img-box {
+  display: flex;
+  justify-content: center; }
+  .img-box img {
+    width: auto !important;
+    max-height: 200px; }
+
+.popup-content__header {
+  cursor: pointer; }
+
 html body .app.flex-row.align-items-center {
   height: 100vh; }
